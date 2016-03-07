@@ -10,6 +10,9 @@
 
 @implementation QuestionSQLiteAdapter
 
+- (void)insert:(Question *)question{
+    
+}
 - (NSArray*)getAll{
     return nil;
 }

@@ -10,7 +10,6 @@
 #import "Result.h"
 #import "AppDelegate.h"
 @interface ResultSQLiteAdapter : NSObject
-
 - (void)insert:(Result *)result;
 - (NSArray*)getAll;
 - (NSManagedObject*)getById:(NSManagedObject*) result;

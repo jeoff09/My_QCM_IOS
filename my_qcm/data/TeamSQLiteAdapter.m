@@ -9,7 +9,9 @@
 #import "TeamSQLiteAdapter.h"
 
 @implementation TeamSQLiteAdapter
-
+- (void)insert:(Team *)team{
+    
+}
 - (NSArray*)getAll{
     return nil;
 }

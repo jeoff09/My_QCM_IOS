@@ -12,7 +12,7 @@
 
 
 @interface TeamSQLiteAdapter : NSObject
-
+- (void)insert:(Team *)team;
 - (NSArray*)getAll;
 - (NSManagedObject*)getById:(NSManagedObject*) team;
 - (void)update:(NSManagedObject*) managedObject withTeam:(Team*) team;

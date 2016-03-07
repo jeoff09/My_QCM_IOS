@@ -11,6 +11,9 @@
 
 @implementation TypSQLiteAdapter
 
+- (void)insert:(Typ *)typ{
+    
+}
 - (NSArray*)getAll{
     return nil;
 }

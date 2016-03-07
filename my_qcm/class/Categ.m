@@ -10,4 +10,8 @@
 
 @implementation Categ
 
+@synthesize  name;
+@synthesize mcqs;
+@synthesize created_at;
+@synthesize updated_at;
 @end

@@ -9,7 +9,9 @@
 #import "UserSQLiteAdapter.h"
 
 @implementation UserSQLiteAdapter
-
+- (void)insert:(User *)user{
+    
+}
 - (NSArray*)getAll{
     return nil;
 }

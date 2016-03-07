@@ -9,5 +9,9 @@
 #import "Answer.h"
 
 @implementation Answer
-
+@synthesize  ans;
+@synthesize question;
+@synthesize isTrue;
+@synthesize created_at;
+@synthesize updated_at;
 @end

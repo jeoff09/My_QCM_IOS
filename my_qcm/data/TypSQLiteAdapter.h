@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 
 @interface TypSQLiteAdapter : NSObject
+- (void)insert:(Typ *)typ;
 - (NSArray*)getAll;
 - (NSManagedObject*)getById:(NSManagedObject*) typ;
 - (void)update:(NSManagedObject*) managedObject withTyp:(Typ*) typ;

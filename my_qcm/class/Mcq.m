@@ -10,4 +10,14 @@
 
 @implementation Mcq
 
+@synthesize name;
+@synthesize dateEnd;
+@synthesize dateStart;
+@synthesize duration;
+@synthesize categ;
+@synthesize question;
+@synthesize result;
+@synthesize created_at;
+@synthesize updated_at;
+
 @end

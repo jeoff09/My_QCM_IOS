@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 
 @interface AnswerSQLiteAdapter : NSObject
+- (void)insert:(Answer *)answer;
 - (NSArray*)getAll;
 - (NSManagedObject*)getById:(NSManagedObject*) answer;
 - (void)update:(NSManagedObject*) managedObject withAnswer:(Answer*) answer;

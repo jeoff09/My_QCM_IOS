@@ -9,7 +9,9 @@
 #import "MediaSQLiteAdapter.h"
 
 @implementation MediaSQLiteAdapter
-
+- (void)insert:(Media *)media{
+    
+}
 - (NSArray*)getAll{
     return nil;
 }

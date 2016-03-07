@@ -11,6 +11,7 @@
 @implementation ResultSQLiteAdapter
 
 
+
 - (void)insert:(Result *)result{
     
 }

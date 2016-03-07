@@ -9,7 +9,9 @@
 #import "CategSQLiteAdapter.h"
 
 @implementation CategSQLiteAdapter
-
+- (void)insert:(Categ *)categ{
+    
+}
 - (NSArray*)getAll{
     return nil;
 }

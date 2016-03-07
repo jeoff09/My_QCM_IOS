@@ -10,6 +10,8 @@
 #import "User.h"
 #import "AppDelegate.h"
 @interface UserSQLiteAdapter : NSObject
+
+- (void)insert:(User *)user;
 - (NSArray*)getAll;
 - (NSManagedObject*)getById:(NSManagedObject*) user;
 - (void)update:(NSManagedObject*) managedObject withUser:(User*) user;

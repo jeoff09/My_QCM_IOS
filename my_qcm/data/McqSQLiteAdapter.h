@@ -11,7 +11,7 @@
 #import "AppDelegate.h"
 
 @interface McqSQLiteAdapter : NSObject
-
+- (void)insert:(Mcq *)mcq;
 - (NSArray*)getAll;
 - (NSManagedObject*)getById:(NSManagedObject*) mcq;
 - (void)update:(NSManagedObject*) managedObject withMcq:(Mcq*) mcq;

@@ -10,6 +10,9 @@
 
 @implementation McqSQLiteAdapter
 
+- (void)insert:(Mcq *)mcq{
+    
+}
 - (NSArray*)getAll{
     return nil;
 }

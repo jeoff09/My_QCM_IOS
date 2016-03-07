@@ -11,7 +11,7 @@
 #import "AppDelegate.h"
 
 @interface MediaSQLiteAdapter : NSObject
-
+- (void)insert:(Media *)media;
 - (NSArray*)getAll;
 - (NSManagedObject*)getById:(NSManagedObject*) media;
 - (void)update:(NSManagedObject*) managedObject withMedia:(Media*) media;
