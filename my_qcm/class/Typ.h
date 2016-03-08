@@ -9,5 +9,15 @@
 #import <Foundation/Foundation.h>
 
 @interface Typ : NSObject
+{
+    NSString* name;
+    NSArray* medias;
+    NSDate* created_at;
+    NSDate* updated_at;
+}
+@property(nonatomic,strong)NSString* name;
+@property(nonatomic,strong)NSArray* medias;
+@property(nonatomic,strong)NSDate* created_at;
+@property(nonatomic,strong)NSDate* updated_at;
 
 @end

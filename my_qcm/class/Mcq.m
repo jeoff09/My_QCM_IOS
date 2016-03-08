@@ -16,7 +16,7 @@
 @synthesize duration;
 @synthesize categ;
 @synthesize question;
-@synthesize result;
+@synthesize results;
 @synthesize created_at;
 @synthesize updated_at;
 

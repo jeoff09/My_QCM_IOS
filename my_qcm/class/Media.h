@@ -7,7 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "Typ.h"
 @interface Media : NSObject
-
+{
+    NSString* url;
+    Typ* typ;
+    NSDate* created_at;
+    NSDate* updated_at;
+}
+@property(nonatomic,strong)NSString* url;
+@property(nonatomic,strong)Typ* typ;
+@property(nonatomic,strong)NSDate* created_at;
+@property(nonatomic,strong)NSDate* updated_at;
 @end

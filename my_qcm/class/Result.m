@@ -10,4 +10,11 @@
 
 @implementation Result
 
+@synthesize score;
+@synthesize user;
+@synthesize isCompleted;
+@synthesize mcq;
+@synthesize created_at;
+@synthesize updated_at;
+
 @end

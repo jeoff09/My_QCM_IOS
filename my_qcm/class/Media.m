@@ -10,4 +10,9 @@
 
 @implementation Media
 
+@synthesize url;
+@synthesize typ;
+@synthesize created_at;
+@synthesize updated_at;
+
 @end

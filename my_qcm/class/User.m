@@ -10,4 +10,10 @@
 
 @implementation User
 
+@synthesize name;
+@synthesize mcqs;
+@synthesize results;
+@synthesize teams;
+@synthesize created_at;
+@synthesize updated_at;
 @end

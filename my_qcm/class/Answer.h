@@ -14,16 +14,13 @@
 {
     NSString* ans;
     Question *question;
-    Boolean* isTrue;
+    BOOL isTrue;
     NSDate* created_at;
     NSDate* updated_at;
-    NSManagedObjectID* identifiant;
 }
 @property(nonatomic,strong)NSString* ans;
 @property(nonatomic,strong)Question* question;
-@property(nonatomic)Boolean* isTrue;
+@property(nonatomic)BOOL isTrue;
 @property(nonatomic,strong)NSDate* created_at;
 @property(nonatomic,strong)NSDate* updated_at;
-
-@property(nonatomic, readonly, strong) NSManagedObjectID *objectID;
 @end

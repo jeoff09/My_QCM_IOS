@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "Categ.h"
-#import "Result.h"
 @interface Mcq : NSObject
 {
     NSString* name;
@@ -17,7 +16,7 @@
     NSInteger* duration;
     Categ* categ;
     NSArray* question;
-    Result* result;
+    NSArray* results;
     NSDate* created_at;
     NSDate* updated_at;
 }
@@ -27,7 +26,7 @@
 @property(nonatomic)NSInteger* duration;
 @property(nonatomic,strong)Categ* categ;
 @property(nonatomic,strong)NSArray* question;
-@property(nonatomic,strong)Result* result;
+@property(nonatomic,strong)NSArray* results;
 @property(nonatomic,strong)NSDate* created_at;
 @property(nonatomic,strong)NSDate* updated_at;
 @end

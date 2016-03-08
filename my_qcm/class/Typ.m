@@ -10,4 +10,11 @@
 
 @implementation Typ
 
+@synthesize name;
+@synthesize medias;
+@synthesize created_at;
+@synthesize updated_at;
+
 @end
+
+

@@ -10,4 +10,11 @@
 
 @implementation Question
 
+@synthesize que;
+@synthesize media;
+@synthesize answers;
+@synthesize mcq;
+@synthesize created_at;
+@synthesize updated_at;
+
 @end
