@@ -15,5 +15,5 @@
 - (NSArray*)getAll;
 - (NSManagedObject*)getById:(NSManagedObject*) typ;
 - (void)update:(NSManagedObject*) managedObject withTyp:(Typ*) typ;
-- (void)remove:(Typ*) typ;
+- (void)remove:(NSManagedObject*) typ;
 @end

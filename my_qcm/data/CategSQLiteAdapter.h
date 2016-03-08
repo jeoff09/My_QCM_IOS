@@ -15,5 +15,5 @@
 - (NSArray*)getAll;
 - (NSManagedObject*)getById:(NSManagedObject*) categ;
 - (void)update:(NSManagedObject*) managedObject withCateg:(Categ*) categ;
-- (void)remove:(Categ*) categ;
+- (void)remove:(NSManagedObject*) categ;
 @end
