@@ -15,7 +15,9 @@
 @synthesize dateStart;
 @synthesize duration;
 @synthesize categ;
-@synthesize question;
+@synthesize questions;
+@synthesize teams;
+@synthesize users;
 @synthesize results;
 @synthesize created_at;
 @synthesize updated_at;

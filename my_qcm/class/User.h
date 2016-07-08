@@ -10,14 +10,18 @@
 
 @interface User : NSObject
 {
-    NSString* name;
+    NSString* username;
+    NSString* email;
+    NSString* password;
     NSArray* mcqs;
     NSArray* results;
     NSArray* teams;
     NSDate* created_at;
     NSDate* updated_at;
 }
-@property(nonatomic,strong)NSString* name;
+@property(nonatomic,strong)NSString* username;
+@property(nonatomic,strong)NSString* password;
+@property(nonatomic,strong)NSString* email;
 @property(nonatomic,strong)NSArray* mcqs;
 @property(nonatomic,strong)NSArray* results;
 @property(nonatomic,strong)NSArray* teams;

@@ -11,6 +11,7 @@
 @implementation Media
 
 @synthesize url;
+@synthesize name;
 @synthesize typ;
 @synthesize created_at;
 @synthesize updated_at;

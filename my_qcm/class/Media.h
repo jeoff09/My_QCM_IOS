@@ -11,11 +11,13 @@
 @interface Media : NSObject
 {
     NSString* url;
+    NSString* name;
     Typ* typ;
     NSDate* created_at;
     NSDate* updated_at;
 }
 @property(nonatomic,strong)NSString* url;
+@property(nonatomic,strong)NSString* name;
 @property(nonatomic,strong)Typ* typ;
 @property(nonatomic,strong)NSDate* created_at;
 @property(nonatomic,strong)NSDate* updated_at;

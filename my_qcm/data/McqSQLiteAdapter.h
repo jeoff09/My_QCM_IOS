@@ -9,12 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "Mcq.h"
 #import "AppDelegate.h"
+#import "Categ.h"
 
 @interface McqSQLiteAdapter : NSObject
 - (void)insert:(Mcq *)mcq;
 - (NSArray*)getAll;
 - (NSManagedObject*)getById:(NSManagedObject*) mcq;
 - (void)update:(NSManagedObject*) managedObject withMcq:(Mcq*) mcq;
-- (void)remove:(Mcq*) mcq;
+- (void)remove:(NSManagedObject*) mcq;
+- (NSArray*)getAllMcqWithCateg:(Categ*) categ;
 
 @end

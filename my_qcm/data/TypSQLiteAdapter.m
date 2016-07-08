@@ -70,7 +70,6 @@
     
     //update Table
     [managedObject setValue:typ.name forKey:@"name"];
-    [managedObject setValue:typ.medias forKey:@"medias"];
     [managedObject setValue:typ.updated_at forKey:@"updated_at"];
     [appDelegate saveContext];
     

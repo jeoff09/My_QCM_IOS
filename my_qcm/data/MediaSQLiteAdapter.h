@@ -15,6 +15,6 @@
 - (NSArray*)getAll;
 - (NSManagedObject*)getById:(NSManagedObject*) media;
 - (void)update:(NSManagedObject*) managedObject withMedia:(Media*) media;
-- (void)remove:(Media*) media;
+- (void)remove:(NSManagedObject*) media;
 
 @end

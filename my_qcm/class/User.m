@@ -9,8 +9,9 @@
 #import "User.h"
 
 @implementation User
-
-@synthesize name;
+@synthesize username;
+@synthesize password;
+@synthesize email;
 @synthesize mcqs;
 @synthesize results;
 @synthesize teams;

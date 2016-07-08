@@ -5,37 +5,83 @@
         <attribute name="created_at" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="isTrue" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="question" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Question" inverseName="answers" inverseEntity="Question" syncable="YES"/>
     </entity>
     <entity name="Categ" syncable="YES">
         <attribute name="created_at" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
-        <relationship name="mcqs" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Mcq" syncable="YES"/>
+        <relationship name="mcqs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Mcq" inverseName="categ" inverseEntity="Mcq" syncable="YES"/>
     </entity>
     <entity name="Mcq" syncable="YES">
+        <attribute name="created_at" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="dateEnd" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="dateStart" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="duration" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="duration" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="categ" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Categ" syncable="YES"/>
+        <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="categ" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Categ" inverseName="mcqs" inverseEntity="Categ" syncable="YES"/>
+        <relationship name="questions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Question" inverseName="mcq" inverseEntity="Question" syncable="YES"/>
+        <relationship name="results" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Result" inverseName="mcq" inverseEntity="Result" syncable="YES"/>
+        <relationship name="teams" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Team" inverseName="mcqs" inverseEntity="Team" syncable="YES"/>
+        <relationship name="users" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="mcqs" inverseEntity="User" syncable="YES"/>
     </entity>
     <entity name="Media" syncable="YES">
         <attribute name="created_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="typ" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Typ" syncable="YES"/>
+        <relationship name="question" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Question" inverseName="media" inverseEntity="Question" syncable="YES"/>
+        <relationship name="typ" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Typ" inverseName="medias" inverseEntity="Typ" syncable="YES"/>
+    </entity>
+    <entity name="Question" syncable="YES">
+        <attribute name="created_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="que" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="answers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Answer" inverseName="question" inverseEntity="Answer" syncable="YES"/>
+        <relationship name="mcq" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Mcq" inverseName="questions" inverseEntity="Mcq" syncable="YES"/>
+        <relationship name="media" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Media" inverseName="question" inverseEntity="Media" syncable="YES"/>
+    </entity>
+    <entity name="Result" syncable="YES">
+        <attribute name="created_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="isCompleted" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="score" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="mcq" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Mcq" inverseName="results" inverseEntity="Mcq" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="results" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Team" syncable="YES">
+        <attribute name="created_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="mcqs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Mcq" inverseName="teams" inverseEntity="Mcq" syncable="YES"/>
+        <relationship name="users" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="teams" inverseEntity="User" syncable="YES"/>
     </entity>
     <entity name="Typ" syncable="YES">
         <attribute name="created_at" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
-        <relationship name="medias" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Media" syncable="YES"/>
+        <relationship name="medias" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Media" inverseName="typ" inverseEntity="Media" syncable="YES"/>
+    </entity>
+    <entity name="User" syncable="YES">
+        <attribute name="created_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="mcqs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Mcq" inverseName="users" inverseEntity="Mcq" syncable="YES"/>
+        <relationship name="results" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Result" inverseName="user" inverseEntity="Result" syncable="YES"/>
+        <relationship name="teams" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Team" inverseName="users" inverseEntity="Team" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Typ" positionX="-63" positionY="-18" width="128" height="103"/>
-        <element name="Media" positionX="126" positionY="-342" width="128" height="105"/>
-        <element name="Categ" positionX="196" positionY="-54" width="128" height="103"/>
-        <element name="Answer" positionX="169" positionY="-180" width="128" height="103"/>
-        <element name="Mcq" positionX="99" positionY="-117" width="128" height="120"/>
+        <element name="Answer" positionX="403" positionY="-198" width="128" height="120"/>
+        <element name="Categ" positionX="367" positionY="84" width="128" height="105"/>
+        <element name="Mcq" positionX="-261" positionY="-270" width="128" height="210"/>
+        <element name="Media" positionX="-126" positionY="-405" width="128" height="135"/>
+        <element name="Typ" positionX="-387" positionY="-513" width="128" height="105"/>
+        <element name="Question" positionX="198" positionY="-270" width="128" height="135"/>
+        <element name="Result" positionX="-236" positionY="54" width="128" height="135"/>
+        <element name="Team" positionX="412" positionY="-342" width="128" height="73"/>
+        <element name="User" positionX="153" positionY="-426" width="128" height="88"/>
     </elements>
 </model>
